@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtherSpecificationActivity"
+    android:background="@drawable/img_bg15">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Add other details"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Language:"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="@id/spinnerLanguage"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewStoryLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Story Length:"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewLanguage"
+        app:layout_constraintLeft_toLeftOf="@id/spinnerLength"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Spinner
+
+        android:id="@+id/spinnerLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLanguage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+            android:id="@+id/textViewGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Genre"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewStoryLength"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewGenre"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Spinner
+            android:id="@+id/spinnerOptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupGenre"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerOptions"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please specify" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutOther"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
